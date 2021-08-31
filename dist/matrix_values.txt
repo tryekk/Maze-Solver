@@ -1,0 +1,10 @@
+/ A  B  C  D  E  F  G  H  I  J  K  M  N  O  P  Q  R ...
+ 00 32 17 00 00 00 52 00
+ 32 00 00 12 15 00 00 00
+ 17 00 00 24 00 00 18 00
+ 00 12 24 00 12 17 00 00
+ 00 15 00 12 00 00 00 36
+ 00 00 00 17 00 00 14 00
+ 52 00 18 00 00 14 00 69
+ 00 00 00 00 36 00 69 00
+/ Please enter a number as arc length between the nodes you wish to link

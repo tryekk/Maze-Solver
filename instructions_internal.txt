@@ -1,0 +1,71 @@
+Path-Finder Instruction Manual
+
+
+INTRODUCTION
+
+Path-Finder is a program created to make learning and teaching of path-finding
+algorithms easier for students and teachers.
+
+The program allows you to visualise the steps taken by each of the algorithms as
+they complete their traversals, with either a graph or a grid view.
+The algorithms perform the same steps when in grid or graph view, but using both
+allows you to understand how they work in different ways.
+
+*** NOTES:
+- Currently the A* algorithm is only available in grid view and the others are
+only available in graph view, with the extra options only currently working in
+grid view also.
+
+- Manual mode does not yet work for A* algorithm.
+***
+
+Extra: The graph's values can be edited using the adjacency matrix in the .txt
+file named 'matrix_values'.
+
+
+AUTOMATIC MODE
+
+1. Simply select your algorithm and enter a start or start and end node when in
+graph view, or click on a cell on the grid twice to select it as the start or
+three times to select it as the end. Clicking once will set it as a wall.
+[Each cell on the grid uses a modulo operation to loop states which means that
+ you can cycle through the four possible states by clicking as many times as
+ you'd like]
+
+
+2. You can select different parameters for the A* algorithm only.
+
+2.1. You can choose the heuristic technique used by the A* algorithm by selecting
+the method of distance calculation it uses. Changing this may give a very different
+path or may result in the same path.
+
+2.2. You can toggle diagonals on or off for the A* algorithm. Allowing diagonals
+will result in all 8 neighbouring nodes being evaluated instead of only the four
+adjacent nodes being evaluated for each working node, which is the default
+behaviour.
+Note that single width diagonal walls are able to be 'hopped-over' when diagonals
+are enabled.
+
+2.3. The final option for the A* algorithm is to display the distances between
+nodes as costs as the algorithm evaluates each node. The format is shown below:
+-----
+|G H|        G cost = Distance node is from start node
+|  F  |        H cost = Distance node is from end node
+-----        F cost = Sum of G+H
+
+Note that the way the numbers are rounded may make it look like the calculations
+are off but it is likely just due to the formatting of the decimal part.
+
+
+3. Press START when you would like to run the selected algorithm with your chosen
+parameters.
+
+
+MANUAL MODE
+
+1. Instructions are same as above, except the manual mode selection can be ticked.
+This will result in an instruction window popping up below the second window.
+It will display the current step that the algorithm is about to complete.
+
+2. The NEXT STEP button can be pressed to progress to the next step in the
+process until the end is reached.

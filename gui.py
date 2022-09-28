@@ -96,7 +96,7 @@ class Gui:
         self.output_value_2.set('Length: 0')
         self.output_value_3 = StringVar()
         self.total_time = StringVar()
-        self.total_time.set('Time taken: 0µs')
+        self.total_time.set('Time taken: 0ms')
         # Creating variables for time calculation
         self.start_time = 0
         self.end_time = 0
@@ -426,7 +426,7 @@ class Gui:
         self.output_value_3.set('--')  # Traversal
         self.output_value_2.set('Length: 0')  # Path length
         self.number_nodes_explored.set('Nodes: 0')  # Nodes
-        self.total_time.set('Time taken: --µs')  # Time
+        self.total_time.set('Time taken: --ms')  # Time
         # Closing existing instruction window
         if self.instruction_window_open:
             self.instruction_app.close_window()
@@ -637,14 +637,14 @@ class Gui:
     def display_values(self):
         # AUTOMATIC MODE
         if self.manual_mode.get() == 0:
-            # Calculating time taken to complete traversal (µs)
+            # Calculating time taken to complete traversal (ms)
             self.end_time = time.time()
-            total_time_taken = (self.end_time - self.start_time)*100000000
+            total_time_taken = (self.end_time - self.start_time)*100000
             # Message displayed if time taken was less then the interval at which time is sampled
             if total_time_taken == 0:
-                self.total_time.set('Time taken: 0µs (< measure freq)')
+                self.total_time.set('Time taken: 0ms (< measure freq)')
             else:
-                self.total_time.set('Time taken: {:.3f}µs'.format(total_time_taken))
+                self.total_time.set('Time taken: {:.3f}ms'.format(total_time_taken))
 
             # Displaying total nodes in path
             if not self.grid_view:

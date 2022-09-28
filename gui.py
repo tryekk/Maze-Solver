@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import matplotlib
 import networkx as nx
 import time
+import re
+
 import graph_file
 import a_star_grid
 import a_star_grid_store

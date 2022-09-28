@@ -226,13 +226,6 @@ class Gui:
         refresh.config(width=10)
         refresh.grid(row=0, column=2, padx=8, pady=12)
 
-        '''
-        # Graph input
-        refresh = Button(self.frame4, text='GRAPH', font=('Helvetica', 14, 'bold'), command=self.draw_graph_input)
-        refresh.config(width=10)
-        refresh.grid(row=0, column=3, padx=8, pady=12)
-        '''
-
     def display_help(self):
         help_top = Toplevel()
         help_top.title("Help")
@@ -280,12 +273,6 @@ class Gui:
             a_star_grid_store.refresh_grid()
             # Updating grid by running function
             self.grid_app.update_grid(self.display_costs.get())
-
-    def draw_graph_input(self):
-        # Creating new window
-        self.graph_input_top = Toplevel(self.master)
-        self.graph_input_app = graph_input.Grid(self.graph_input_top)
-        self.graph_input_open = True
 
     def draw(self):
         plt.close('all')  # Closing all previously opened graphs

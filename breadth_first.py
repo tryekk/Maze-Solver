@@ -78,19 +78,21 @@ class BreadthFirst:
 
             neighbour_pos += 1  # Moving to next node in array
 
-        queue_contents = []
-        for item in list(self.queue.queue):
-            queue_contents.append(chr(item+97))
-        self.manual_instruction_2 = "Updated queue contents: {}".format(queue_contents)
-
-        self.manual_instruction_3 = "Mark nodes as visited and make the first node in the queue ({}),\n" \
-                                    "the new current node and remove it from queue".format(queue_contents[0])
-
         # Only run in automatic mode
         if self.manual_mode == 0:
             # Only loops the function when queue is not empty [terminates when queue is empty]
             if not self.queue.empty():
                 self.breadth_first()
+        else:
+            # Seems to be working
+            queue_contents = []
+            for item in list(self.queue.queue):
+                queue_contents.append(chr(item+97))
+            self.manual_instruction_2 = "Updated queue contents: {}".format(queue_contents)
+
+            self.manual_instruction_3 = "Mark nodes as visited and make the first node in the queue ({}),\n" \
+                                        "the new current node and remove it from queue".format(queue_contents[0])
+
 
     def output(self):
         self.total_distance = 0
